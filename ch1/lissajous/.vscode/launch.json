@@ -1,0 +1,30 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+        //Firstly: run 'go build' in cwd
+		{
+			"name": "Launch",
+			"type": "go",
+			"request": "launch",
+			"mode": "exec",
+			"program": "${workspaceRoot}/lissajous",
+            "env": {},
+			"args": ["web"]
+		},
+        //Open the terminal, enter the follow command
+        //dlv debug web --headless --listen=:6060
+        //os.Args[0]=./debug os.Args[1]=web
+        //break main.go:47, main.go:68
+        //"name":"connect" something wrong happen
+        //some bugs here. I am not sure visual studio code
+        //or delve make mistake.
+        {
+			"name": "connect to debug server",
+            "type": "go",
+			"request": "launch",
+			"mode": "connect",
+			"env": {},
+			"args": ["localhost:6060"]
+		}
+	]
+}

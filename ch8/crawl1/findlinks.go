@@ -37,7 +37,7 @@ func main() {
 
 	// Start with the command-line arguments.
 	go func() { worklist <- os.Args[1:] }()
-
+    //worklist <- os.Args[1:] 
 	// Crawl the web concurrently.
 	seen := make(map[string]bool)
 	for list := range worklist {

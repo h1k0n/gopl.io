@@ -1,0 +1,12 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+        {
+			"name": "attach to pid",
+			"type": "go",
+			"request": "launch",
+			"mode": "attach",
+            "args": ["5814"]
+		}
+	]
+}
